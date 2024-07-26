@@ -1,0 +1,17 @@
+Solution:
+Whenever I get an image file, I go and run file (to make sure it's an image),
+binwalk (to see if there are hidden files), 
+strings and usually I pair that with grep  
+lastly I check the image in a hexeditor, just to check the header and such.
+aka. using " $ hexedit cat.jpg "
+Interesting... I can see some base64, maybe?
+W5M0MpCehiHzreSzNTczkc9d and cGljb0NURnt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9
+
+Flag:
+echo W5M0MpCehiHzreSzNTczkc9d | base64 -d
+or 
+echo cGljb0NURnt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9 | base64 -d
+
+->picoCTF{the_m3tadata_1s_modified}
+
+ref link:https://ctftime.org/writeup/26973

@@ -1,0 +1,6 @@
+Solution:
+1. $ chmod +x ./warm
+2. $ ./warm
+
+Flag:
+picoCTF{b1scu1ts_4nd_gr4vy_18788aaa}

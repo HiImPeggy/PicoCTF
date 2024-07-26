@@ -1,0 +1,4 @@
+First, using 'file' to check if there exist hidden file.
+Then, you will find 2_c.jpg.
+Unzip dolls.jpg, get base_images/2_c.jpg.
+Then, unzip files recursivly, finally get flag.txt.

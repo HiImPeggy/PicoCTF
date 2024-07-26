@@ -1,0 +1,7 @@
+Solution:
+conserve string looks like using utf-16 or utf-8,
+using online decoder, find using utf-16 -> utf-8 get someting weird,
+hence use utf-16BE -> utf-8
+
+flag:
+picoCTF{16_bits_inst34d_of_8_26684c20}

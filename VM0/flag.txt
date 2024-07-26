@@ -1,0 +1,1 @@
+input * 5 , and then turn into hex, then turn hex into ascii
