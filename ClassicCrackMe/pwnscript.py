@@ -7,7 +7,7 @@ p = remote("titan.picoctf.net", 63914)
 
 p.recvuntil(b"Enter the secret password: ")
 
-p.sendline(b"zqncqnqkun}vswigi{nqoofjfw'b\xbdfgyilpp|yj\xd6roitflb\xd9\\}")
+p.sendline(b"zqncqnqkun}\\s)igianqoofjf]ub\xd7fgyilppb_j\xbcroi\xf2fl|A\\}")
 
 print(p.recvall())
 

