@@ -9,7 +9,8 @@ Then, you can use
 $ git push -u origin main
 
 
-Currently solve：
+Currently solved：
 
-![image](https://github.com/user-attachments/assets/8cf760d4-10eb-4a7a-b981-dade3ad1d416)
+![image](https://github.com/user-attachments/assets/0d5108ab-7644-4ef5-9752-fb62d1d8e23b)
+
 
